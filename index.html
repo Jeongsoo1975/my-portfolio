@@ -3,86 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev Portfolio | 프로젝트 갤러리</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>프리랜서 포트폴리오</title>
+    <link rel="stylesheet" href="css/styles.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700&family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrQdPkvF2L9O/bw2E0lU0sMqFasjhROu99bBlVkGvj0N0AmPqGqE7eFqT9RV+5+MwZvDV1lOyXwJgx5Lkg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+    <!-- 헤더 -->
+    <header>
         <div class="container">
-            <a href="#home" class="logo">DevPortfolio</a>
-            <ul class="nav-links">
-                <li><a href="#projects">프로젝트</a></li>
-                <li><a href="#about">소개</a></li>
-                <li><a href="#contact">연락처</a></li>
-            </ul>
+            <h1>나의 포트폴리오</h1>
+            <nav>
+                <ul>
+                    <li><a href="#projects">프로젝트</a></li>
+                    <li><a href="#contact">연락처</a></li>
+                </ul>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>창의적인 솔루션,<br>품질 중심 개발</h1>
-            <p>웹 개발 프로젝트 결과물을 확인해보세요</p>
-        </div>
-    </section>
-
-    <!-- Projects Grid -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2>최근 프로젝트</h2>
-            <div class="project-grid">
-                <!-- Project Card 1 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="project1-thumb.jpg" alt="프로젝트 1 썸네일">
-                        <div class="overlay">
-                            <h3>이커머스 플랫폼 개발</h3>
-                            <p>React 기반 쇼핑몰 시스템</p>
+    <!-- 메인 섹션 -->
+    <main>
+        <section id="projects">
+            <div class="container">
+                <h2>프로젝트</h2>
+                <div class="projects-grid">
+                    <!-- 프로젝트 카드 시작 -->
+                    <div class="project-card">
+                        <img src="projects/project1/slide1.png" alt="프로젝트 1 이미지">
+                        <div class="project-info">
+                            <h3>프로젝트 1</h3>
+                            <p>프로젝트 1에 대한 간략한 설명입니다.</p>
+                            <a href="projects/project1/" class="btn">자세히 보기</a>
                         </div>
                     </div>
-                    <div class="project-links">
-                        <a href="project1-detail.pptx" download class="btn">
-                            <i class="fas fa-download"></i> PPT 다운로드
-                        </a>
-                        <a href="#demo" class="btn">데모 보기</a>
-                    </div>
+                    <!-- 프로젝트 카드 끝 -->
+                    <!-- 추가 프로젝트 카드를 여기에 추가 -->
                 </div>
-
-                <!-- Repeat project cards as needed -->
-                <!-- 프로젝트 카드를 추가할 때 동일한 구조 유지 -->
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>연락처</h2>
-            <div class="contact-info">
-                <p><i class="fas fa-envelope"></i> contact@devportfolio.com</p>
+        <!-- 연락처 섹션 -->
+        <section id="contact">
+            <div class="container">
+                <h2>연락처</h2>
+                <p>이메일: your.email@example.com</p>
+                <p>전화번호: 010-1234-5678</p>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-github"></i></a>
                     <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <!-- 추가 소셜 링크 -->
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Script for Smooth Scroll -->
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <!-- 푸터 -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 나의 포트폴리오. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
